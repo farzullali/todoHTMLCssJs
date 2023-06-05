@@ -1,0 +1,138 @@
+:root{
+    --main-color: rgba(41,128,185,1.0);
+    --main-color-light: rgba(41,128,185,0.5);
+    --accent-color: rgba(243,156,18,1.0);
+    --accent-color-light: rgba(243,156,18,0.5);
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--accent-color));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.main-title{
+    font-size: 2rem;
+    color: white;
+}
+
+.header, .task-form{
+    min-height: 20vh;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-item{
+    padding: .5rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: white;
+    outline: none;
+}
+
+.btn-task-add{
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.btn-task-add:hover{
+    color: white;
+    background-color: var(--accent-color);
+}
+
+.tasks-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tasks-list{
+    list-style: none;
+    min-width: 40%;
+}
+
+.tasks-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.2rem;
+    background-color: white;
+    transition: .5s ease-in-out;
+}
+.task-item{
+    flex: 1;
+    padding: .5rem;
+    word-break: break-word;
+}
+.btn-task{
+    background-color: var(--accent-color);
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.btn-task-delete{
+    background-color: red;
+}
+
+
+.special-buttons{
+    display: flex;
+    position: absolute;
+    bottom: -100px;
+}
+.btn-delete-all{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    height: 50px;
+    margin-right: 5px;
+}
+.btn-selected-delete{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    background-color: gray;
+    transform: scale(0.8);
+    transition: 0.3s all ease-in-out;
+}
+.btn-active{
+    transform: scale(1);
+    background-color: chocolate;
+    color: white;
+}
+
+.task-done{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fa-solid{
+    pointer-events: none;
+}
+.delete{
+    transform: scale(0);
+}
+
+.select{
+    margin-left: 5px;
+}
+
+.deactive{
+    display: none;
+}
